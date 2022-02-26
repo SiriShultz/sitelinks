@@ -6,3 +6,10 @@ CALCULATE (
     FILTER ( Products, Products[UnitPrice] < 20 )
 )
 <code><pre>
+
+# Day 2
+<pre><code>
+#2MostExpensiveProduct = 
+TOPN(1, DISTINCT(Products[ProductName]), CALCULATE(Products[Unit Price])
+)
+<code><pre>
