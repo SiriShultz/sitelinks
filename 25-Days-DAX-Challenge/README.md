@@ -55,26 +55,22 @@ DAX: CALCULATE, ALL, COUNTROWS, FILTER
 
 DAX: CALCULATE, COUNTROWS
 
-    #5CountProductCost 15-25 = 
+    #5 CountProductCost 15-25 = 
     CALCULATE (
         COUNTROWS ( Products ),
         Products[UnitPrice] >= 15 && Products[UnitPrice] <= 25
     )
 
-# Day 2
 
-# Day 2: Which product is the most expensive?
+# Day 6: What is the average number of products (not qty) per order?
 
-Answer: Côte de Blaye
+DAX: AVERAGEX, CALCULATE, DISTINCTCOUNT
 
-    #2MostExpensiveProduct =
-    TOPN (
-        1,
-        DISTINCT ( Products[ProductName] ),
-        CALCULATE (
-        Products[Unit Price]
+    #6 AvgNumProduct/Order =
+    AVERAGEX (
+        DISTINCT ( Orders[OrderID] ),
+        CALCULATE ( DISTINCTCOUNT ( Orders[ProductID] ) )
         )
-    )
 
 # Day 2
 
