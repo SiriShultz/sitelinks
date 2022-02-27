@@ -40,7 +40,7 @@ DAX: AVERAGE
     
 
 
-# Day 4: Which product is the most expensive?
+# Day 4: How many products are above the average unit price?
 
 DAX: CALCULATE, ALL, COUNTROWS, FILTER
 
@@ -51,17 +51,14 @@ DAX: CALCULATE, ALL, COUNTROWS, FILTER
     Result
 
 
-# Day 2: Which product is the most expensive?
+# Day 5: How many products cost between $15 and $25?(inclusive)
 
-DAX: CALCULATE, ALL, COUNTROWS, FILTER
+DAX: CALCULATE, COUNTROWS
 
-    #2MostExpensiveProduct =
-    TOPN (
-        1,
-        DISTINCT ( Products[ProductName] ),
-        CALCULATE (
-        Products[Unit Price]
-        )
+    #5CountProductCost 15-25 = 
+    CALCULATE (
+        COUNTROWS ( Products ),
+        Products[UnitPrice] >= 15 && Products[UnitPrice] <= 25
     )
 
 # Day 2
