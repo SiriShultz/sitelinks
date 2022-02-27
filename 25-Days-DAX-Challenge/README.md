@@ -5,29 +5,18 @@ Private, Clicked add a readme file
 # The top
 How to do stuff
 
-# Day 1
+# Day 1: How many current products cost less than $20?
 
-How to create a link on a word - it's about brackets and parenthesis
+Answer: 37
 
+    #1 Count CurrProduct <$20 =
     CALCULATE (
     COUNTROWS ( Products ),
     Products[Discontinued] = FALSE,
     FILTER ( Products, Products[UnitPrice] < 20 )
     )
 
-End
-    
-It will look like this
-[FixClicks website](https://www.fixclicks.net/seo)
-
-Word is in brackets - and the link is in the parenthesis
-
-had to go in and replace desktop-tutorial with shared-links on this Skip to link below
-
-Skip to [Day 4](https://github.com/billsteeley/shared-links/blob/main/README.md#day-4)
-
-
-# Day 1 1/2
+# Day 2
 
 How to create a link on a word - it's about brackets and parenthesis
 
