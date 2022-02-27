@@ -1,0 +1,8 @@
+#2MostExpensiveProduct =
+TOPN (
+    1,
+    DISTINCT ( Products[ProductName] ),
+    CALCULATE (
+    Products[Unit Price]
+    )
+)
