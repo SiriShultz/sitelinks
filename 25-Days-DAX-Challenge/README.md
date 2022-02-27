@@ -9,12 +9,13 @@ How to do stuff
 
 How to create a link on a word - it's about brackets and parenthesis
 
-    
     CALCULATE (
     COUNTROWS ( Products ),
     Products[Discontinued] = FALSE,
     FILTER ( Products, Products[UnitPrice] < 20 )
-)
+    )
+
+End
     
 It will look like this
 [FixClicks website](https://www.fixclicks.net/seo)
