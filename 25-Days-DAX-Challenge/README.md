@@ -9,12 +9,12 @@ How to do stuff
 
 How to create a link on a word - it's about brackets and parenthesis
 
-    Open bracket first [
-    Then put what you want the text to say on the link
-    Then closed bracket ]
-    Right after that, do the open parenthesis (
-    And add the entire link in there https:// whatever ever ever .com
-    Then closed parenthesis
+    
+    CALCULATE (
+    COUNTROWS ( Products ),
+    Products[Discontinued] = FALSE,
+    FILTER ( Products, Products[UnitPrice] < 20 )
+)
     
 It will look like this
 [FixClicks website](https://www.fixclicks.net/seo)
