@@ -16,7 +16,41 @@ Answer: 37
     FILTER ( Products, Products[UnitPrice] < 20 )
     )
 
+
+# Day 2: Which product is the most expensive?
+
+Answer: Côte de Blaye
+
+    #2MostExpensiveProduct =
+    TOPN (
+        1,
+        DISTINCT ( Products[ProductName] ),
+        CALCULATE (
+        Products[Unit Price]
+        )
+    )
+
 # Day 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 How to create a link on a word - it's about brackets and parenthesis
 
