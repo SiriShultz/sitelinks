@@ -7,15 +7,64 @@ How to do stuff
 
 # Day 1: How many current products cost less than $20?
 
-Answer: 37
+DAX: CALCULATE, COUNTROWS, FILTER
 
     #1 Count CurrProduct <$20 =
     CALCULATE (
-    COUNTROWS ( Products ),
-    Products[Discontinued] = FALSE,
-    FILTER ( Products, Products[UnitPrice] < 20 )
+        COUNTROWS ( Products ),
+        Products[Discontinued] = FALSE,
+        FILTER ( Products, Products[UnitPrice] < 20 )
     )
 
+
+# Day 2: Which product is the most expensive?
+
+DAX: TOPN, DISTINCT, CALCULATE
+
+    #2 MostExpensiveProduct =
+    TOPN (
+        1,
+        DISTINCT ( Products[ProductName] ),
+        CALCULATE (
+        Products[Unit Price]
+        )
+    )
+
+
+# Day 3: What is the average unit price for our products?
+
+DAX: AVERAGE
+
+    #3 AvgUnitPrice =
+    AVERAGE ( Products[UnitPrice] )
+    
+
+
+# Day 4: Which product is the most expensive?
+
+DAX: CALCULATE, ALL, COUNTROWS, FILTER
+
+    #4 CountProductAboveAvg =
+    VAR AvgAll = CALCULATE ( [#3AvgUnitPrice], ALL ( Products ) )
+    VAR Result = CALCULATE ( COUNTROWS ( Products ), FILTER ( Products, [Unit Price] > AvgAll ) )
+    RETURN
+    Result
+
+
+# Day 2: Which product is the most expensive?
+
+DAX: CALCULATE, ALL, COUNTROWS, FILTER
+
+    #2MostExpensiveProduct =
+    TOPN (
+        1,
+        DISTINCT ( Products[ProductName] ),
+        CALCULATE (
+        Products[Unit Price]
+        )
+    )
+
+# Day 2
 
 # Day 2: Which product is the most expensive?
 
@@ -31,7 +80,6 @@ Answer: Côte de Blaye
     )
 
 # Day 2
-
 
 
 
