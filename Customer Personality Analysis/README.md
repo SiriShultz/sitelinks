@@ -142,21 +142,6 @@ Create Calculated column for Spending group of customers (low and high spending)
     RETURN
       SWITCH ( TRUE (), Customers[Spending] < PctSpnd, "Low", "High" )
 
-# Spending Adjusted
-Create measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
-
-    Spending Adj =
-    CALCULATE (
-      [TotalSpending],
-      FILTER (
-          Customers,
-          Customers[ID]
-              && Customers[Income] <> BLANK ()
-              && Customers[Income] < 200000
-              && Customers[Age] < 100
-      )
-    )
-
 # Senior Group
  
 Create measures for a Seniority (time of being customer) by calculate in months and the last date is October 4, 2014 (date when was done the analysis).
@@ -228,44 +213,100 @@ Create segments of customer to 5 groups base on results of calculated columns: S
       )
 
     
-End
+# Spending Adjusted
+Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
+
+    Spending Adj =
+    CALCULATE (
+      [TotalSpending],
+      FILTER (
+          Customers,
+          Customers[ID]
+              && Customers[Income] <> BLANK ()
+              && Customers[Income] < 200000
+              && Customers[Age] < 100
+      )
+    )
 
 
-# Day 3
+# Average Income
+Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
 
-Some bullet points - create by using a star
+    AvgIncome =
+    CALCULATE (
+        AVERAGE ( Customers[Income] ),
+        Customers[Income] <> BLANK ()
+            && Customers[Income] < 200000
+            && Customers[Age] < 100
+     )
+# Average Seniority
+Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
 
-* one, hit enter
-* two, keep on going
-* three, if this is the last one then enter twice and move back to the left indent
+    AvgSeniority =
+    CALCULATE (
+        AVERAGE ( Customers[Seniority] ),
+        Customers[Income] <> BLANK ()
+            && Customers[Income] < 200000
+            && Customers[Age] < 100
+     )
+# Average Spending
+Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
 
-Plus can add links under the bullets, just hit the * first and then use the link format with the brackets and parenthesis
+    AvgSpending =
+    CALCULATE (
+        AVERAGE ( Customers[Spending] ),
+        Customers[Income] <> BLANK ()
+            && Customers[Income] < 200000
+            && Customers[Age] < 100
+     )
 
-* Link to Google.com right here -- [Google.com](https://www.google.com)
-* Another link - this one to [Bing](https://www.bing.com/)
-* Similar to the <a> and then </> after - to insert [anchor text LINK](https://www.fixclicks.net) within the sentence
+# Count Customer
+Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
 
-End
-    
+    Count ID =
+        CALCULATE (
+            COUNT ( Customers[ID] ),
+            Customers[Income] <> BLANK ()
+                && Customers[Income] < 200000
+                && Customers[Age] < 100
+        )
 
-# Day 4
 
-Go back to [Day 2](https://github.com/billsteeley/shared-links/blob/main/README.md#day-2)
-    
-Trying to combine these things
+# Count Age
+Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
 
-    Trying to add links within a gray box
-    Like putting a [link on this phrase](https://www.fixclicks.net) within this sentence
-    Nope, that doesn't work
-    How about some bullet points in the gray box? Let's try
-    * one
-    * two
-    * three
-    Nope - that doesn't seem to work either
-    
-Hit enter twice and then backspace to the left margin
+    CountAge = 
+    COUNT(Customers[Age]))
 
-End
+
+# Count Income
+Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
+
+    CountIncome = 
+    COUNT(Customers[Income]))
+
+# Count Senior
+Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
+
+    CountSenior = 
+    COUNT(Customers[Senior]))
+
+# Count Spending
+Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
+
+    CountSpending = 
+    COUNT(Customers[Spending]))
+
+
+# Count Purchase
+Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
+
+    Num Purchase =
+    CALCULATE (
+        SUM ( PurchaseTypes[No. of Purchase] ),
+        FILTER ( Customers, Customers[ID] && Customers[Income] <> BLANK () )
+    )
+
     
 [Back to Top](https://github.com/billsteeley/shared-links/blob/main/README.md#the-top)
 
