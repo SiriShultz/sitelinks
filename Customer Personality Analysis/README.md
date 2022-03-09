@@ -32,7 +32,7 @@ Start with January 1st of minmimum year and ends wtih December 31st of maximum y
 
 # Age
 
-Create Calculated column for Age.
+Create a calculated column for Age.
 
     Age = 
     2014 - Customers[Year_Birth]
@@ -40,12 +40,12 @@ Create Calculated column for Age.
     
 # Children
 
-Create measure to calculate the total number of children (kids and teens at home).
+Create a measure to calculate the total number of children (kids and teens at home).
 
     TotalChildren = 
     SUMX(Customers, Customers[Kidhome] + Customers[Teenhome])
   
- Create Calculated column for Children status.
+ Create a calculated column for Children status.
 
     Children = 
     CALCULATE(
@@ -60,7 +60,7 @@ Create measure to calculate the total number of children (kids and teens at home
  
  # Has_Child
 
-Create Calculated column for customers who has child and no child.
+Create a calculated column for customers who has child and no child.
 
     Has_Child =
     CALCULATE (
@@ -92,7 +92,7 @@ Or Average Income
     
 
 
-Create Calculated column for income group of customers (below average and high income) using 0.5 percentile or average.
+Create a calculated column for income group of customers (below average and high income) using 0.5 percentile or average.
 
     IncomeGroup =
     VAR PctInc =
@@ -102,12 +102,12 @@ Create Calculated column for income group of customers (below average and high i
                 
 # Spending Group
  
-Create measure to calculate the total spending amount for each customer.
+Create a measure to calculate the total spending amount for each customer.
 
     TotalSpending = 
     SUMX('Products Table', 'Products Table'[Amount])
 
-Create Calculated column for Spending amount for each customer.
+Create a calculated column for Spending amount for each customer.
 
     Spending = 
     [TotalSpending]
@@ -134,7 +134,7 @@ Or Average Spending
     )
     
 
-Create Calculated column for Spending group of customers (low and high spending) using 0.5 percentile or average.
+Create a calculated column for Spending group of customers (low and high spending) using 0.5 percentile or average.
 
     SpendingGroup =
     VAR PctSpnd =
@@ -178,7 +178,7 @@ Or Average Seniority
     )
     
 
-Create Calculated column for Seniority group of customers (New and Old customer) using 0.5 percentile or average.
+Create a calculated column for Seniority group of customers (New and Old customer) using 0.5 percentile or average.
 
     SeniorGroup =
     VAR PctSenior =
@@ -212,7 +212,8 @@ Create segments of customer to 5 groups base on results of calculated columns: S
         "Others"
       )
 
-    
+# Measures for Analysis
+
 # Spending Adjusted
 Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
 
@@ -228,9 +229,8 @@ Create a measure to calculate the total spending amount by filter only the custo
       )
     )
 
-
 # Average Income
-Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
+Create a measure to calculate the average income by filter only the customers that has income less than $200,000 and less than 100 years old..
 
     AvgIncome =
     CALCULATE (
@@ -240,7 +240,7 @@ Create a measure to calculate the total spending amount by filter only the custo
             && Customers[Age] < 100
      )
 # Average Seniority
-Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
+Create a measure to calculate the average seniority by filter only the customers that has income less than $200,000 and less than 100 years old..
 
     AvgSeniority =
     CALCULATE (
@@ -250,7 +250,7 @@ Create a measure to calculate the total spending amount by filter only the custo
             && Customers[Age] < 100
      )
 # Average Spending
-Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
+Create a measure to calculate the average spending by filter only the customers that has income less than $200,000 and less than 100 years old..
 
     AvgSpending =
     CALCULATE (
@@ -260,27 +260,18 @@ Create a measure to calculate the total spending amount by filter only the custo
             && Customers[Age] < 100
      )
 
-# Count Customer
-Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
 
-    Count ID =
-        CALCULATE (
-            COUNT ( Customers[ID] ),
-            Customers[Income] <> BLANK ()
-                && Customers[Income] < 200000
-                && Customers[Age] < 100
-        )
-
+# Create Data Distribution Measures
 
 # Count Age
-Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
+Create a measure to calculate the count of customer in age range by filter only the customers that has income less than $200,000 and less than 100 years old..
 
     CountAge = 
     COUNT(Customers[Age]))
 
 
 # Count Income
-Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
+Create a measure to calculate the count of customer in income range by filter only the customers that has income less than $200,000 and less than 100 years old..
 
     CountIncome = 
     COUNT(Customers[Income]))
