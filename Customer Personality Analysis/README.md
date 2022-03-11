@@ -157,13 +157,13 @@ Create a calculated column for Spending group of customers (low and high spendin
 
 # Senior Group
  
-Create measures for a Seniority (time of being customer) by calculate in months and the last date is October 4, 2014 (date when was done the analysis).
+Create measures for a Seniority (time of being customer) by calculate in months and the last date is Decemberr 14, 2014 (date when was done the analysis).
 
     Seniority =
       VAR StartDate =
         MIN ( Customers[Dt_Customer] )
       VAR CurrentDate =
-        DATE ( 2014, 10, 4 )
+        DATE ( 2014, 12, 07 )
       VAR DayNum =
         DATEDIFF ( StartDate, CurrentDate, DAY )
       RETURN
