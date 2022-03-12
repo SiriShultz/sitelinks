@@ -2,7 +2,7 @@ Web Analytics Time Series with Calculation Group and custom conditional formatti
 
 
 # Date Table
-Create Date table with the first date and last date that exist in the fact table.
+Create a date table with the first date and last date that exists in the fact table.
 
     dDate =
     VAR Mycal =
@@ -27,28 +27,28 @@ Create Date table with the first date and last date that exist in the fact table
     
 # Desktop Users
 
-Total of desktop users.
+Total number of desktop users.
 
     Desktop = 
     SUM('Web Traffic'[Desktop Users])
     
 # Mobile Users
 
-Total of Mobile users.
+Total number of mobile users.
 
     Mobile = 
     SUM('Web Traffic'[Mobile Users])
 
 # Tablet Users
 
-Total of Tablet users.
+Total number of tablet users.
 
     Tablet = 
     SUM('Web Traffic'[Tablet Users])
     
 # All Devices Users
 
-Total users of all devices.
+Total number of users for all devices.
 
     AllDevices =
     SUMX (
