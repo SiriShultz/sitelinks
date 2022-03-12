@@ -55,7 +55,7 @@ Total users of all devices.
     'Web Traffic',
     'Web Traffic'[Desktop Users] + 'Web Traffic'[Mobile Users] + 'Web Traffic'[Tablet Users]
     )
-# Device% by Calculation Group
+# Device % by Calculation Group
 
 Use SELECTEDMEASURE() in Calculation Group.
 
