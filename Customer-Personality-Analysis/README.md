@@ -15,7 +15,7 @@ Solution with Python by Aman Kharwal: https://thecleverprogrammer.com/2021/02/08
 
 Challenge: Perform the Customer Personality Analysis using Power BI.
 
-[Measures for Analysis](https://github.com/SiriShultz/sitelinks/blob/main/Customer-Personality-Analysis/README.md#the-top)
+[Measures for Analysis](https://github.com/SiriShultz/sitelinks/blob/main/Customer-Personality-Analysis/README.md#measures-for-analysis)
 
 # Date Table
 
