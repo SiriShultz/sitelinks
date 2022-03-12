@@ -228,6 +228,8 @@ Create segments of customer to 5 groups base on results of calculated columns: S
 
 # Measures for Analysis
 
+[Back to Top](https://github.com/SiriShultz/sitelinks/blob/main/Customer-Personality-Analysis/README.md#customer-personality-analysis-with-power-bi)
+
 # Spending Adjusted
 Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
 
