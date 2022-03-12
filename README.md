@@ -1,6 +1,6 @@
 # POWER BI PROJECTS
     
-DAX projects
+DAX projects from my portfolio.  See ______
 
 
 # Customer Personality Analysis
@@ -9,11 +9,10 @@ DAX projects
     Dataset from Kaggle
     Original visualizations created by ______
 
-    
-Thanks 
+     
 
 
-# 25 Days of Dax
+# 25 Days of Dax Challenge
 
     A collection of challenges by ______
     Completed with the DFW Power BI group
