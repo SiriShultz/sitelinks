@@ -312,5 +312,5 @@ Create a measure to calculate the total spending amount by filter only the custo
     )
 
     
-[Back to Top](https://github.com/SiriShultz/sitelinks/blob/main/Customer%20Personality%20Analysis/README.md#the-top)
+[Back to Top](https://github.com/SiriShultz/sitelinks/blob/main/Customer-Personality-Analysis/README.md#the-top)
 
