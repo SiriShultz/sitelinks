@@ -1,4 +1,4 @@
-Web Analytics Time Series with Calculation Group and custom conditional formatting.
+Web Analytics Time Series Analysis with Calculation Group and Custom Conditional Formatting.
 
 
 # Date Table
@@ -55,6 +55,7 @@ Total number of users for all devices.
     'Web Traffic',
     'Web Traffic'[Desktop Users] + 'Web Traffic'[Mobile Users] + 'Web Traffic'[Tablet Users]
     )
+
 # Device % by Calculation Group
 
 Use SELECTEDMEASURE() in Calculation Group.
