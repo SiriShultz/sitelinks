@@ -95,5 +95,5 @@ Choose Calculation Group item(s) in {"...","..."} and select a measure to insert
     )    
     
     
-    
+   
 [Back to Top](https://github.com/SiriShultz/sitelinks/tree/main/Web-Analytics#date-table)
