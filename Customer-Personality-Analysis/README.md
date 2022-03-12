@@ -14,7 +14,7 @@ Inspiration: https://www.kaggle.com/imakash3011/customer-personality-analysis
 Solution with Python by Aman Kharwal: https://thecleverprogrammer.com/2021/02/08/customer-personality-analysis-with-python/
 
 Challenge: Perform the Customer Personality Analysis using Power BI.
-
+[Measures](https://github.com/SiriShultz/sitelinks/blob/main/Customer-Personality-Analysis/README.md#the-top)
 
 # Date Table
 
