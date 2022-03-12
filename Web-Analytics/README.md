@@ -72,7 +72,7 @@ Use SELECTEDMEASURE() in Calculation Group.
     RETURN
     IF ( PrevYear > 0, SELECTEDMEASURE() - PrevYear, BLANK () )
 
-# Year over Year% by Calculation Group
+# Year over Year % by Calculation Group
 
 Use SELECTEDMEASURE() in Calculation Group.
 
