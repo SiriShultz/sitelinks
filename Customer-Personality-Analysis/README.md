@@ -1,10 +1,8 @@
 # Customer Personality Analysis with Power BI
-Goal: Need to perform clustering to summarize customer segments.
 
 Customer Personality Analysis is a detailed analysis of a company’s ideal customers. It helps a business to better understand its customers and makes it easier for them to modify products according to the specific needs, behaviors and concerns of different types of customers.
 
-Customer personality analysis helps a business to modify its product based on its target customers from different types of customer segments. For example, instead of spending money to market a new product to every customer in the company’s database, a company can analyze which customer segment is most likely to buy the product and then market the product only on that particular segment.
-
+This project was inspired by the Data Science Project on Customer Personality Analysis with Python that was created by Aman Kharwal. I used a dataset that provided on Kaggle. My goal was to create a similar project, but use Power BI instead of Python. I used Power BI and Power Query to prepare/clean data, created fact and dimension tables for data modeling, and connected them with relationships. I also created measures and calculated columns for grouping and the calculation process. Finally, I create the visualizations below to show the results of the analysis. [See the full project here.](https://sirishultz.com/portfolio/customer-personality-analysis)
 
 Acknowledgement: The dataset for this project is provided by Dr. Omar Romero-Hernandez.
 
