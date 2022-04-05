@@ -1,6 +1,6 @@
 # POWER BI PROJECTS
     
-DAX projects from my portfolio.  See ______
+This repository is created to document DAX solutions I used in my Power BI projects from my portfolio.  See the a full version of my project and explore the visualizations here.
 
 
 # Customer Personality Analysis
