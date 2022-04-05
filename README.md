@@ -12,9 +12,7 @@ This project was inspired by the Data Science Project on Customer Personality An
 
 # 25 Days of Dax Challenge
 
-This challenge created by [Ruth Pozuelo Martinez (Microsoft MVP)](https://mvp.microsoft.com/en-us/PublicProfile/5002323), a Power BI expert.  She posted DAX questions every day between December 1-25, 2021 and invited anyone to solve the challenge using there own way. I had so much fun joining this challenge and love to share my solutions and see different way from other people.
- 
-[Learn more about this challenge:](https://curbal.com/25-days-of-dax-fridays-challenge)
+This challenge created by [Ruth Pozuelo Martinez (Microsoft MVP)](https://mvp.microsoft.com/en-us/PublicProfile/5002323), a Power BI expert.  She posted DAX questions every day between December 1-25, 2021 and invited anyone to solve the challenge using there own way. I had so much fun joining this challenge and love to share my solutions and see different way from other people. [Learn more about this challenge here](https://curbal.com/25-days-of-dax-fridays-challenge)
  
 
 
