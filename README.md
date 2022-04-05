@@ -16,11 +16,11 @@ This challenge created by [Ruth Pozuelo Martinez (Microsoft MVP)](https://mvp.mi
  
 
 
+# Web Analytics Time Series with Calculation Group and Custom Conditional Formatting
+
+This project was created by using a mock dataset from Google Analytics. The data shows overall web traffic by device type in different time periods.  Creating a Time Series Analysis can result in many measures that have similar calculations. I used Tabular Editor (an external tool from Power BI) to create a [Calculation Group](https://docs.microsoft.com/en-us/analysis-services/tabular-models/calculation-groups?view=asallproducts-allversions) that helps to reduce the number of measures required to create the visualizations. However, applying conditional formatting to a Calculation Group can be challenging, so I also created some additional measures to customize the formatting for the specific calculation items.
+   
+
 # Work Out Wednesday
 
-    Weekly projects to explore DAX
-    Credit to ________
-    Continued projects with DFW Power BI group
-    
-Thanks 
-
+Workout Wednesday is a weekly challenge to re-create data-driven visualizations. The challenges are designed to kick-start personal development in Tableau and Power BI. Each Wednesday, a challenge is released and participants are asked to replicate the challenge as closely as possible using their own Power BI Skills.  [Learn more about the challenge >>](https://www.workout-wednesday.com/)
