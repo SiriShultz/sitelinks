@@ -10,8 +10,8 @@ This project was inspired by the Data Science Project on Customer Personality An
      
 
 
-# 25 Days of Dax Challenge
-# [Github Repository](https://github.com/SiriShultz/sitelinks/tree/main/25-Days-DAX-Challenge)
+# [25 Days of Dax Challenge](https://github.com/SiriShultz/sitelinks/tree/main/25-Days-DAX-Challenge)
+
 This challenge created by [Ruth Pozuelo Martinez (Microsoft MVP)](https://mvp.microsoft.com/en-us/PublicProfile/5002323), a Power BI expert.  She posted DAX questions every day between December 1-25, 2021 and invited anyone to solve the challenge using there own way. I had so much fun joining this challenge and love to share my solutions, plus like to see how other people approach and solve the daily challenges. [Learn more about this challenge here](https://curbal.com/25-days-of-dax-fridays-challenge) or [see my Power BI visuals here.](https://sirishultz.com/portfolio/25-days-dax-challenge)
  
 
