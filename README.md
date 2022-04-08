@@ -16,7 +16,7 @@ This challenge created by [Ruth Pozuelo Martinez (Microsoft MVP)](https://mvp.mi
  
 
 
-# Web Analytics Time Series with Calculation Group and Custom Conditional Formatting
+# [Web Analytics Time Series](https://github.com/SiriShultz/sitelinks/tree/main/Web-Analytics) with Calculation Group and Custom Conditional Formatting
 
 This project was created by using a mock dataset from Google Analytics. The data shows overall web traffic by device type in different time periods. Creating a Time Series Analysis can result in many measures with similar calculations. I used Tabular Editor (an external tool from Power BI) to create a [Calculation Group](https://docs.microsoft.com/en-us/analysis-services/tabular-models/calculation-groups?view=asallproducts-allversions) that helps reduce the number of measures required to create the visualizations. However, applying conditional formatting to a Calculation Group can be challenging; so I also created some additional measures to customize the formatting for the specific calculation items. [See my Power BI project here.](https://sirishultz.com/portfolio/web-analytics-time-series)
    
