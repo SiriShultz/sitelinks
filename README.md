@@ -3,7 +3,7 @@
 This repository is created to document DAX solutions I used in my Power BI projects from my portfolio.  [See a full version of my projects and explore the visualizations on my portfolio here.](https://sirishultz.com/)
 
 
-# Customer Personality Analysis
+# [Customer Personality Analysis](https://github.com/SiriShultz/sitelinks/tree/main/Customer-Personality-Analysis)
 
 This project was inspired by the Data Science Project on Customer Personality Analysis with Python that was created by [Aman Kharwal](https://thecleverprogrammer.com/2021/02/08/customer-personality-analysis-with-python/). I used a dataset that provided on [Kaggle](https://www.kaggle.com/imakash3011/customer-personality-analysis). My goal was to create a similar project, but use Power BI instead of Python. I used Power BI and Power Query to prepare/clean data, created fact and dimension tables for data modeling, and connected them with relationships. I also created measures and calculated columns for grouping and the calculation process. Finally, I create the visualizations below to show the results of the analysis, [see the full project here.](https://sirishultz.com/portfolio/customer-personality-analysis)
 
