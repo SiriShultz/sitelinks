@@ -23,4 +23,4 @@ This project was created by using a mock dataset from Google Analytics. The data
 
 # Work Out Wednesday
 
-Workout Wednesday is a weekly challenge to re-create data-driven visualizations. The challenges are designed to kick-start personal development in Tableau and Power BI. Each Wednesday, a challenge is released and participants are asked to replicate the challenge as closely as possible using their own Power BI Skills.  [Learn more about the challenge >>](https://www.workout-wednesday.com/) or [See my Power BI visuals here.](https://sirishultz.com/portfolio/wow-challenges)
+Workout Wednesday is a weekly challenge to re-create data-driven visualizations. The challenges are designed to kick-start personal development in Tableau and Power BI. Each Wednesday, a challenge is released and participants are asked to replicate the challenge as closely as possible using their own Power BI Skills.  [Learn more about the challenge >>](https://www.workout-wednesday.com/) or [visit my portfolio to see my Power BI visuals.](https://sirishultz.com/portfolio/wow-challenges)
