@@ -93,7 +93,7 @@ Create measures for a 0.5 percentile or an average of income by filter only the 
         && Customers[Age] < 100
      )
 
-Or Average Income
+Or Average Income.
 
     AvgIncome =
     CALCULATE (
@@ -136,7 +136,7 @@ Create measures for a 0.5 percentile or an average of Spending by filter only th
         && Customers[Age] < 100
      )
 
-Or Average Spending
+Or Average Spending.
 
     AvgSpnd =
     CALCULATE (
@@ -180,7 +180,7 @@ Create measures for a 0.5 percentile or an average of Seniority by filter only t
         && Customers[Age] < 100
      )
 
-Or Average Seniority
+Or Average Seniority.
 
     AvgSenior =
     CALCULATE (
@@ -201,7 +201,7 @@ Create a calculated column for Seniority group of customers (New and Old custome
 
 
 # Segment
-Create segments of customer to 5 groups base on results of calculated columns: Stars, Need Attention, High Potential, Leaky Bucket and Others (for other posibilities)
+Create segments of customer to 5 groups base on results of calculated columns: Stars, Need Attention, High Potential, Leaky Bucket and Others (for other posibilities).
 
     Segment =
       SWITCH (
@@ -230,7 +230,7 @@ Create segments of customer to 5 groups base on results of calculated columns: S
 [Back to Top](https://github.com/SiriShultz/sitelinks/blob/main/Customer-Personality-Analysis/README.md#customer-personality-analysis-with-power-bi)
 
 # Spending Adjusted
-Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
+Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old.
 
     Spending Adj =
     CALCULATE (
@@ -245,7 +245,7 @@ Create a measure to calculate the total spending amount by filter only the custo
     )
 
 # Average Income
-Create a measure to calculate the average income by filter only the customers that has income less than $200,000 and less than 100 years old..
+Create a measure to calculate the average income by filter only the customers that has income less than $200,000 and less than 100 years old.
 
     AvgIncome =
     CALCULATE (
@@ -255,7 +255,7 @@ Create a measure to calculate the average income by filter only the customers th
             && Customers[Age] < 100
      )
 # Average Seniority
-Create a measure to calculate the average seniority by filter only the customers that has income less than $200,000 and less than 100 years old..
+Create a measure to calculate the average seniority by filter only the customers that has income less than $200,000 and less than 100 years old.
 
     AvgSeniority =
     CALCULATE (
@@ -265,7 +265,7 @@ Create a measure to calculate the average seniority by filter only the customers
             && Customers[Age] < 100
      )
 # Average Spending
-Create a measure to calculate the average spending by filter only the customers that has income less than $200,000 and less than 100 years old..
+Create a measure to calculate the average spending by filter only the customers that has income less than $200,000 and less than 100 years old.
 
     AvgSpending =
     CALCULATE (
@@ -280,33 +280,33 @@ Create a measure to calculate the average spending by filter only the customers 
 [Back to Top](https://github.com/SiriShultz/sitelinks/blob/main/Customer-Personality-Analysis/README.md#customer-personality-analysis-with-power-bi)
 
 # Count Age
-Create a measure to calculate the count of customer in age range by filter only the customers that has income less than $200,000 and less than 100 years old..
+Create a measure to calculate the count of customer in age range by filter only the customers that has income less than $200,000 and less than 100 years old.
 
     CountAge = 
     COUNT(Customers[Age]))
 
 
 # Count Income
-Create a measure to calculate the count of customer in income range by filter only the customers that has income less than $200,000 and less than 100 years old..
+Create a measure to calculate the count of customer in income range by filter only the customers that has income less than $200,000 and less than 100 years old.
 
     CountIncome = 
     COUNT(Customers[Income]))
 
 # Count Senior
-Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
+Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old.
 
     CountSenior = 
     COUNT(Customers[Senior]))
 
 # Count Spending
-Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
+Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old.
 
     CountSpending = 
     COUNT(Customers[Spending]))
 
 
 # Count Purchase
-Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
+Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old.
 
     Num Purchase =
     CALCULATE (
