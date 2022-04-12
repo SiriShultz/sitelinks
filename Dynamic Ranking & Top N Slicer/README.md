@@ -28,75 +28,18 @@ Create a measure to calculate the average home value.
 
     AvgHomeValue = AVERAGE(fHomeValue[HomeValue])
 
-# Average Income
-Create a measure to calculate the average income by filter only the customers that has income less than $200,000 and less than 100 years old..
+# Ranking for all level of regions.
+Create measures to rank the average home value in all level of regions (city, metro, state)
 
-    AvgIncome =
-    CALCULATE (
-        AVERAGE ( Customers[Income] ),
-        Customers[Income] <> BLANK ()
-            && Customers[Income] < 200000
-            && Customers[Age] < 100
-     )
-# Average Seniority
-Create a measure to calculate the average seniority by filter only the customers that has income less than $200,000 and less than 100 years old..
+    City Rank =
+    RANKX(ALL(dGeo[City-State]),[AvgHomeValue])
+    
+    Metro Rank =
+    RANKX(ALL(dGeo[Metro]),[AvgHomeValue])
+    
+    State Rank =
+    RANKX(ALL(dGeo[StateName]),[AvgHomeValue])
 
-    AvgSeniority =
-    CALCULATE (
-        AVERAGE ( Customers[Seniority] ),
-        Customers[Income] <> BLANK ()
-            && Customers[Income] < 200000
-            && Customers[Age] < 100
-     )
-# Average Spending
-Create a measure to calculate the average spending by filter only the customers that has income less than $200,000 and less than 100 years old..
-
-    AvgSpending =
-    CALCULATE (
-        AVERAGE ( Customers[Spending] ),
-        Customers[Income] <> BLANK ()
-            && Customers[Income] < 200000
-            && Customers[Age] < 100
-     )
-
-
-# Create Data Distribution Measures
-[Back to Top](https://github.com/SiriShultz/sitelinks/blob/main/Customer-Personality-Analysis/README.md#customer-personality-analysis-with-power-bi)
-
-# Count Age
-Create a measure to calculate the count of customer in age range by filter only the customers that has income less than $200,000 and less than 100 years old..
-
-    CountAge = 
-    COUNT(Customers[Age]))
-
-
-# Count Income
-Create a measure to calculate the count of customer in income range by filter only the customers that has income less than $200,000 and less than 100 years old..
-
-    CountIncome = 
-    COUNT(Customers[Income]))
-
-# Count Senior
-Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
-
-    CountSenior = 
-    COUNT(Customers[Senior]))
-
-# Count Spending
-Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
-
-    CountSpending = 
-    COUNT(Customers[Spending]))
-
-
-# Count Purchase
-Create a measure to calculate the total spending amount by filter only the customers that has income less than $200,000 and less than 100 years old..
-
-    Num Purchase =
-    CALCULATE (
-        SUM ( PurchaseTypes[No. of Purchase] ),
-        FILTER ( Customers, Customers[ID] && Customers[Income] <> BLANK () )
-    )
 
     
 [Back to Top](https://github.com/SiriShultz/sitelinks/blob/main/Customer-Personality-Analysis/README.md#customer-personality-analysis-with-power-bi)
