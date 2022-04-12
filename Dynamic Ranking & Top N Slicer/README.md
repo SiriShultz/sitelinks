@@ -8,16 +8,16 @@ This project was created by using a flatefile dataset (CSV) exported from [Zill
 Start with January 1st of minmimum year and ends wtih December 31st of maximum year.
 
     Calendar = 
-VAR MyCal = CALENDAR(MIN('fHomeValue'[Date]), MAX('fHomeValue'[Date]))
-Return
-ADDCOLUMNS(MyCal,
-"Year", YEAR([Date]),
-"Quarter", FORMAT([Date],"\Qq"),
-"MonthNum", MONTH([Date]),
-"Month", FORMAT([Date],"mmmm"),
-"Month/Year", FORMAT([Date],"mmm yyyy"),
-"Year-Month sort", FORMAT([Date], "yyyy-mm")
-)
+    VAR MyCal = CALENDAR(MIN('fHomeValue'[Date]), MAX('fHomeValue'[Date]))
+    Return
+    ADDCOLUMNS(MyCal,
+    "Year", YEAR([Date]),
+    "Quarter", FORMAT([Date],"\Qq"),
+    "MonthNum", MONTH([Date]),
+    "Month", FORMAT([Date],"mmmm"),
+    "Month/Year", FORMAT([Date],"mmm yyyy"),
+    "Year-Month sort", FORMAT([Date], "yyyy-mm")
+    )
 
 # Age
 
