@@ -28,7 +28,7 @@ Create a measure to calculate the average home value.
 
     AvgHomeValue = AVERAGE(fHomeValue[HomeValue])
 
-# Ranking for all level of regions.
+# Top Rankings for City, Metro, and State
 Create measures to rank the average home value in all level of regions (city, metro, state).
 
     City Rank =
