@@ -67,7 +67,7 @@ Create measures to rank the average year over year % of home value in all level 
     RANKX(ALL(dGeo[StateName]),[HomeValue YoY%])
 
  # Dynamic Rankings
-Create measures to rank the average year over year % of home value in all level of regions (city, metro, state).
+Create measures to rank the average home value and Year over Year % in all level of regions (city, metro, state).
 
     Rank =
         SWITCH(TRUE(),
