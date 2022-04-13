@@ -28,6 +28,20 @@ Create a measure to calculate the average home value.
 
     AvgHomeValue = AVERAGE(fHomeValue[HomeValue])
 
+# Average Year over Year % of Home Value
+Create a measure to calculate the average year over year % of home value.
+
+    HomeValue YoY% = IF(
+                    ISFILTERED('Calendar'[Date]),
+                    ERROR("Time intelligence quick measures can only be grouped or filtered by the Power BI-provided date hierarchy or primary date column."),
+                    VAR __PREV_YEAR =
+                        CALCULATE(
+                            fHomeValue[AvgHomeValue],
+                            DATEADD('Calendar'[Date], -1, YEAR)
+                        )
+                    RETURN
+                        DIVIDE(fHomeValue[AvgHomeValue] - __PREV_YEAR, __PREV_YEAR))
+                        
 # Top Rankings for City, Metro, and State
 Create measures to rank the average home value in all level of regions (city, metro, state).
 
@@ -39,8 +53,69 @@ Create measures to rank the average home value in all level of regions (city, me
     
     State Rank =
     RANKX(ALL(dGeo[StateName]),[AvgHomeValue])
-
-
     
+ # Year over Year Top Rankings for City, Metro, and State
+Create measures to rank the average year over year % of home value in all level of regions (city, metro, state).
+
+    City RankYoY =
+    RANKX(ALL(dGeo[City-State]),[HomeValue YoY%])
+    
+    Metro RankYoY =
+    RANKX(ALL(dGeo[Metro]),[HomeValue YoY%])
+    
+    State RankYoY =
+    RANKX(ALL(dGeo[StateName]),[HomeValue YoY%])
+
+ # Dynamic Rankings
+Create measures to rank the average year over year % of home value in all level of regions (city, metro, state).
+
+    Rank =
+        SWITCH(TRUE(),
+              ISINSCOPE(dGeo[City-State]), [City Rank],
+              ISINSCOPE(dGeo[Metro]),[Metro Rank],
+              ISINSCOPE(dGeo[StateName]),[State Rank],
+           BLANK())                
+    
+    RankYoY =
+        SWITCH(TRUE(),
+              ISINSCOPE(dGeo[City-State]), [City RankYoY],
+              ISINSCOPE(dGeo[Metro]),[Metro RankYoY],
+              ISINSCOPE(dGeo[StateName]),[State RankYoY],
+           BLANK())                
+   
+   # What If Parameter
+Generate slicers with What If Parameter function with the default value at 5.
+
+    Parameter Value =
+    SELECTEDVALUE('TopN'[Parameter], 5)
+    
+
+# Dynamic Top N 
+Create Mearsures to filter the Top N results base on the selected value on the slicer.
+
+    TopN HomeValue =
+                      VAR Ranking = [Rank]
+                      VAR _TopN = [Parameter Value]
+                      VAR Result = INT(Ranking <= _TopN)
+                      RETURN Result        
+
+# Dynamic Headline 
+Create Mearsures for the Card Visuals to display the results base on the selected value.
+
+    Headline1 =
+                VAR _Year = SELECTEDVALUE('Calendar'[Year])
+                VAR _TopNum = SELECTEDVALUE('TopN'[Parameter])
+                VAR _State = SELECTEDVALUE(dGeo[StateName])
+                RETURN
+                _Year & " Average Year over Year by State in USA"
+
+    Headline2 =
+                    VAR _Year = SELECTEDVALUE('Calendar'[Year])
+                    VAR _TopNum = SELECTEDVALUE('TopN'[Parameter])
+                    VAR _State = SELECTEDVALUE(dGeo[StateName])
+                    RETURN
+                    IF(HASONEVALUE(dGeo[StateName]), _Year & " Top " & _TopNum & " Cities in " & _State,
+                    _Year & " Top " & _TopNum & " Cities in USA")
+
 [Back to Top](https://github.com/SiriShultz/sitelinks/blob/main/Customer-Personality-Analysis/README.md#customer-personality-analysis-with-power-bi)
 
